@@ -8,8 +8,8 @@ from mir import Signal
 
 sig = Signal()
 #Read audio File
-sig.wav_read('2.wav')
+sig.wav_read('Ques5Input.wav')
 wave = sig.data
 wavefft = np.fft.ifft(wave)
 #Writing the audio file
-sig.wav_write('3.wav')
+sig.wav_write('Ques5Output.wav')
