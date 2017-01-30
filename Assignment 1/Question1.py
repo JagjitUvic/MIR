@@ -1,11 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy.fftpack
 import math
 import mir
 from mir import Sinusoid
-
+#get the sin wave
 sin = Sinusoid(Fs=100)
+#differentiate real and imaginary components
 datar = sin.data.real
 datai = sin.data.imag
 N = len(datar)
@@ -20,13 +20,13 @@ for k in range(N):
     outputr.append(sumr)
     outputi.append(sumi)
 outputp = []
-
+#final output
 for a in range(N):
     outputp.append(math.sqrt((outputr[a]*outputr[a])+(outputi[a]*outputi[a])))
-
+#plot output
 plt.plot(outputp)
 plt.show()
-
+#find the plot dft with built in function
 outputk = sin.dft()
 plt.plot(abs(outputk))
 plt.show()
