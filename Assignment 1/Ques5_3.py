@@ -24,7 +24,9 @@ for n in range (4):
     index.append(np.argmax(magnitude))
     value.append(np.amax(magnitude))
     magnitude[np.argmax(magnitude)] = 0
-#setting 4 high values rest all 0
+#setting 4 high values rest all 0 if you use this logic it will be get same
+use a for loop to check this
+
 for n in range (length):
     if n == index[0]:
         magnitude[n] = value[0]
